@@ -197,6 +197,32 @@
     
     <!--This is the code for the actual page-->
     <body>
+	    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="461570451284999"
+  logged_in_greeting="Hey - do you want to start your day with a bit of motivation? Type yes!"
+  logged_out_greeting="Hey - do you want to start your day with a bit of motivation? Type yes!">
+</div>  <!-- This is Facebook chat bot! -->
+	    
     <div class="page-center">
     <div class="custom-form">
         <div class="container">
